@@ -1,0 +1,30 @@
+@import url('https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css');
+@import 'var';
+@import 'mixin';
+@import 'media';
+
+.bg {
+  &-blue {
+    @include prefix((
+            background-color: $blue,
+    ), webkit moz);
+  }
+}
+
+.container {
+  @include prefix((
+          width: 100%,
+          max-width: 1320px,
+          padding-right: 15px,
+          padding-left: 15px,
+          margin-right: auto,
+          margin-left: auto,
+  ), webkit moz);
+
+  &-form {
+    @include prefix((
+            height: 100%,
+            display: flex,
+    ), webkit moz);
+  }
+}
